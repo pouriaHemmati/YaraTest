@@ -196,7 +196,7 @@
         android:clickable="true"
         android:focusable="true"
         android:gravity="center"
-        android:visibility="gone">
+        android:visibility="visible">
 
         <ProgressBar
             android:layout_width="50dp"
