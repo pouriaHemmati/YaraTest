@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:fitsSystemWindows="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/lay_notFound"
+        android:layout_width="@dimen/_180sdp"
+        android:layout_height="@dimen/_100sdp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_gravity="center"
+        android:visibility="gone"
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="@drawable/radius_layout_not_found">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_11ssp"
+            android:text="@string/notFound"
+            />
+
+
+        <Button
+            android:id="@+id/btn_try"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginBottom="@dimen/_10sdp"
+            android:background="@color/black"
+            android:text="Try"
+            android:textColor="@color/white"
+            />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/app_bar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_200sdp"
+        android:fitsSystemWindows="true">
+
+        <com.google.android.material.appbar.CollapsingToolbarLayout
+            android:id="@+id/toolbar_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fitsSystemWindows="true"
+            app:contentScrim="?attr/colorPrimary"
+            app:expandedTitleGravity="top"
+            android:background="@color/background"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed"
+            app:toolbarId="@+id/toolbar">
+
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+
+
+                <com.github.florent37.shapeofview.shapes.RoundRectView
+                    android:id="@+id/lay_logo_recycler"
+                    android:layout_width="@dimen/_120sdp"
+                    android:layout_height="match_parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:shape_roundRect_topLeftRadius="10dp"
+                    app:shape_roundRect_bottomLeftRadius="10dp"
+                    app:shape_roundRect_topRightRadius="10dp"
+                    app:shape_roundRect_bottomRightRadius="10dp"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:layout_marginBottom="@dimen/_5sdp"
+                    >
+
+                    <ImageView
+                        android:id="@+id/img_details"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="fitXY"
+
+                        />
+
+
+                </com.github.florent37.shapeofview.shapes.RoundRectView>
+
+
+                <TextView
+                    android:id="@+id/txt_title_details"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintLeft_toRightOf="@+id/lay_logo_recycler"
+                    app:layout_constraintRight_toRightOf="parent"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:layout_marginEnd="@dimen/_10sdp"
+                    android:textColor="@color/textColor"
+                    android:textSize="@dimen/_15ssp"/>
+
+                <TextView
+                    android:id="@+id/txt_year_details"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toBottomOf="@+id/txt_title_details"
+                    app:layout_constraintLeft_toRightOf="@+id/lay_logo_recycler"
+                    app:layout_constraintRight_toRightOf="parent"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:layout_marginEnd="@dimen/_10sdp"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_13ssp"/>
+
+                <TextView
+                    android:id="@+id/txt_runtime_details"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toBottomOf="@+id/txt_year_details"
+                    app:layout_constraintLeft_toRightOf="@+id/lay_logo_recycler"
+                    app:layout_constraintRight_toRightOf="parent"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:layout_marginEnd="@dimen/_10sdp"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_13ssp"/>
+
+                <TextView
+                    android:id="@+id/txt_rate_details"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toBottomOf="@+id/txt_runtime_details"
+                    app:layout_constraintLeft_toRightOf="@+id/lay_logo_recycler"
+                    app:layout_constraintRight_toRightOf="parent"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:layout_marginEnd="@dimen/_10sdp"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_13ssp"/>
+
+                <TextView
+                    android:id="@+id/txt_language_details"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toBottomOf="@+id/txt_rate_details"
+                    app:layout_constraintLeft_toRightOf="@+id/lay_logo_recycler"
+                    app:layout_constraintRight_toRightOf="parent"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:layout_marginEnd="@dimen/_10sdp"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_13ssp"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                app:layout_collapseMode="pin">
+
+                <ImageView
+                    android:id="@+id/img_back"
+                    android:layout_width="@dimen/_26sdp"
+                    android:layout_height="@dimen/_26sdp"
+                    android:layout_gravity="left"
+                    android:src="@drawable/ic_baseline_arrow_back_24" />
+            </androidx.appcompat.widget.Toolbar>
+
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <include layout="@layout/content_details" />
+
+    <!-- loading -->
+    <RelativeLayout
+        android:id="@+id/layout_loading"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/background"
+        android:clickable="true"
+        android:focusable="true"
+        android:gravity="center"
+        android:visibility="gone">
+
+        <ProgressBar
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:theme="@style/loadingProgress"
+            android:layout_centerInParent="true"
+            />
+
+    </RelativeLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

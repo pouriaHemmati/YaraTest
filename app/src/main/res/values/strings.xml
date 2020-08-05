@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">Yara</string>
+    <string name="notFound">No information found in DataBase , Please connect to internet for first </string>
+</resources>

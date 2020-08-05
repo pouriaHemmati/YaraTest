@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="ExpandableTextView">
+        <attr name="trimLength" format="integer"/>
+    </declare-styleable>
+
+
+    <declare-styleable name="RatingStarBar">
+        <attr name="progress_color" format="color"/>
+        <attr name="half_color" format="color"/>
+        <attr name="empty_color" format="color"/>
+        <attr name="changeable" format="boolean"/>
+    </declare-styleable>
+
+
+</resources>
+
+
