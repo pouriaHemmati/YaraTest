@@ -38,6 +38,8 @@ public class DetailsActivity extends BaseAppCompatActivity implements IDetailsVi
     TextView txt_rate_details;
     @BindView(R.id.txt_plot_details)
     TextView txt_plot_details;
+    @BindView(R.id.txt_type_details)
+    TextView txt_type_details;
     @BindView(R.id.txt_actor_details)
     TextView txt_actor_details;
     @BindView(R.id.txt_director_details)
@@ -52,10 +54,8 @@ public class DetailsActivity extends BaseAppCompatActivity implements IDetailsVi
     TextView txt_released_details;
     @BindView(R.id.txt_writer_details)
     TextView txt_writer_details;
-    @BindView(R.id.txt_box_office_details)
-    TextView txt_box_office_details;
-    @BindView(R.id.txt_Type_details)
-    TextView txt_Type_details;
+    @BindView(R.id.txt_box_office_detail)
+    TextView txt_box_office_detail;
     MyDataBaseDetails myDataBaseDetails;
     private String content;
     @BindView(R.id.img_details)
@@ -162,8 +162,8 @@ public class DetailsActivity extends BaseAppCompatActivity implements IDetailsVi
             txt_country_details.setText("Country : " + jDetail.Country);
             txt_released_details.setText("Released : " + jDetail.Released);
             txt_writer_details.setText("Writer : " + jDetail.Writer);
-            txt_box_office_details.setText("BoxOffice : " + jDetail.BoxOffice);
-            txt_Type_details.setText("Type : " + jDetail.Type);
+            txt_box_office_detail.setText( jDetail.BoxOffice);
+            txt_type_details.setText("Type : " + jDetail.Type);
             layout_loading.setVisibility(View.GONE);
         }
     }

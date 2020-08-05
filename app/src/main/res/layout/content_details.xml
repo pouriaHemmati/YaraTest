@@ -16,25 +16,38 @@
         android:layout_marginTop="@dimen/_20sdp">
 
 
+        <ImageView
+            android:id="@+id/logo_ZoneID"
+            android:layout_width="@dimen/_20sdp"
+            android:layout_height="@dimen/_20sdp"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:src="@drawable/ic_baseline_movie_24"
+            />
 
         <TextView
-            android:id="@+id/txt_Type_details"
+            android:id="@+id/txt_type_details"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/logo_ZoneID"
+            app:layout_constraintBottom_toBottomOf="@+id/logo_ZoneID"
+            app:layout_constraintLeft_toRightOf="@+id/logo_ZoneID"
             android:layout_marginStart="20dp"
             android:layout_marginEnd="20dp"
             android:textSize="@dimen/_13ssp"
             android:textColor="@color/colorBrown200"
             android:text="@string/app_name" />
 
+
+
         <TextView
             android:id="@+id/txt_plot_details"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            app:layout_constraintTop_toBottomOf="@+id/txt_Type_details"
+            app:layout_constraintTop_toBottomOf="@+id/txt_type_details"
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintLeft_toLeftOf="parent"
             android:layout_marginStart="20dp"
@@ -86,8 +99,7 @@
             android:textSize="@dimen/_13ssp"
             android:textColor="@color/colorBrown200"
             android:text="@string/app_name" />
-
-
+        
         <TextView
             android:id="@+id/txt_awards_details"
             android:layout_width="0dp"
@@ -146,16 +158,32 @@
 
         <TextView
             android:id="@+id/txt_box_office_details"
-            android:layout_width="0dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             app:layout_constraintTop_toBottomOf="@+id/txt_writer_details"
-            app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintLeft_toLeftOf="parent"
             android:layout_marginStart="20dp"
             android:layout_marginTop="20dp"
             android:layout_marginEnd="20dp"
             android:textSize="@dimen/_13ssp"
+
             android:textColor="@color/colorBrown200"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginBottom="@dimen/_20sdp"
+            android:text="Box Office : " />
+
+        <TextView
+            android:id="@+id/txt_box_office_detail"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="@+id/txt_box_office_details"
+            android:layout_marginStart="5dp"
+            app:layout_constraintLeft_toRightOf="@+id/txt_box_office_details"
+            android:layout_marginEnd="20dp"
+            android:textSize="@dimen/_13ssp"
+            android:textColor="@color/colorGreen700"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginBottom="@dimen/_20sdp"
             android:text="@string/app_name" />
 
 
